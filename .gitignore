@@ -1,0 +1,52 @@
+# --- Ambiente virtual / Python ---
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+
+# --- Segredos e configuração local (seção 3.1 do PROJETO.md) ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+secrets/
+
+# --- Node (se algum serviço auxiliar usar) ---
+node_modules/
+
+# --- Docker / volumes locais ---
+**/pgdata/
+**/redis-data/
+**/n8n-data/
+
+# --- Mídia e artefatos gerados (vídeos, imagens, áudio de teste) ---
+# Evita subir arquivos pesados gerados pelo motor durante o desenvolvimento
+media/
+output/
+tmp/
+*.mp4
+*.mov
+*.wav
+*.mp3
+
+# --- IDE ---
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+
+# --- Sistema operacional ---
+.DS_Store
+Thumbs.db
+
+# --- Logs ---
+*.log
+logs/
